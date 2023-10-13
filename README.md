@@ -440,7 +440,7 @@ On the bottom right of the screen, click "Add Trigger". Then don't change any of
 
 ![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/e4a5ba66-b902-4767-ac6a-61b74c4f3d01)
 
-When you click on ok, it will show a popup where you will have to select your google account:
+Then click "Save". It will show a popup where you will have to select your google account:
 
 ![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/3d1c2f84-37d5-415a-a974-5dc3924723b0)
 
