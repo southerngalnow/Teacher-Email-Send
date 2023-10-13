@@ -3,7 +3,7 @@ If a teacher wants to hold a club meeting during ROAR, he/she can have the stude
 
 Create a new google form that asks for 2 entries. The first entry should be a short response input that asks for student's name. The second entry should be a dropdown that allows the student to select their Roar teacher's name.
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/fc1842b9-0e2c-4556-8173-cd27c4f2b7ac)
+![Screenshot 2023-10-12 8 14 49 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/37b526aa-076d-42c2-98d4-022add968a57)
 
 
 The list of the names of all the teachers at Dunwoody High School is below. Just copy the whole list from below and paste it into the first choice of the dropdown:
@@ -165,24 +165,24 @@ Now the google form part of this is done!
 
 Now click on "Responses" and then click "Open in Sheet" or "Create new Sheet". This will create a google sheet that automatically updates whenever a new google form is submitted. 
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/3246681a-f844-4efa-8c4c-af16b33ec5b7)
+![Screenshot 2023-10-12 8 16 07 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/cb5ecc32-2f55-4bcc-9742-ea603bf125e0)
 
 
 You can either create a whole new google sheet or link it to an existing sheet. Whatever you do, when you create the sheet, come to the bottom of the document and where is says "Form Responses 1", click on the triangle and rename the sheet to "Send Email".
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/f78b66a4-c515-475d-94fd-bccb4ec83bc0)
-
+![Screenshot 2023-10-12 8 12 15 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/72aeca43-7d89-49de-a580-18c5f4d651c5)
 
 
 Column A of this sheet should be Timestamps, Column B should be Student Name and Column C should be teacher name. If this is not the order they are in right now, drag the columns around until they are in this order. 
 
 For Column D, create a new title that says "Email Sent". 
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/e8007643-e56b-4f59-8437-4327163a057c)
+![Screenshot 2023-10-12 8 08 34 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/fbeb37c7-6133-4f53-bbd9-6d153979ef58)
+
 
 Now we need to do the email automation! On the google sheet, click on "Extensions" then click "Apps Script"
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/9e1998db-68c5-4be6-89c6-fb4e83621446)
+![Screenshot 2023-10-12 8 18 02 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/484144b6-e1db-4502-b396-a09dcf84bb78)
 
 
 Replace all the code already present there with the code below:
@@ -416,7 +416,7 @@ You can edit the text after the `subject: ` as this will be the subject of your 
 
 After that, click Ctrl+S on your keyboard. Then, create a new file. Select HTML. And name it “Email” (without the quotation marks).
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/96410df8-4809-4b4a-8a91-f84ed8ae4dcb)
+![Screenshot 2023-10-12 8 22 26 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/944c75f7-b942-421b-b9f6-9223fcf455f6)
 
 
 Then replace all the code there with the code below:
@@ -434,19 +434,21 @@ After you are satisfied with it, click Ctrl+S on your keyboard again to save you
 
 Now we are almost done! We have done all the hard work. Now we just need the code to run every time someone submits the google form! To do that, on the very left of the screen, click on the symbol that looks like a stopwatch. If you hover over it, it should say "Triggers".
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/13438b85-2d00-4b42-b307-b2cb41ba52f3)
+![Screenshot 2023-10-12 8 30 12 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/fd191680-67ce-41a2-941a-925bd78bf29d)
+
 
 On the bottom right of the screen, click "Add Trigger". Then don't change any of the setting except where it says "Select event type". For that, select "On form submit".
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/e4a5ba66-b902-4767-ac6a-61b74c4f3d01)
+![Screenshot 2023-10-12 8 32 10 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/778a981a-19ed-4fd0-91db-cbc86a6d8e6f)
 
 Then click "Save". It will show a popup where you will have to select your google account:
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/3d1c2f84-37d5-415a-a974-5dc3924723b0)
+![Screenshot 2023-10-12 8 32 29 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/b0570c8f-0eb6-41f4-aaae-6370f522d334)
+
 
 When you select your google account, it will show the following message. This is normal and is completely safe because you made this yourself and is not an official app:
 
-![image](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/45c0f5eb-380b-4580-a3f9-62f629fa8e72)
+![Screenshot 2023-10-12 8 32 41 PM](https://github.com/heightcalculator/Teacher-Email-Send/assets/91100197/810042b4-d57c-4470-a6d4-62735d2c9871)
 
 Scroll down on this message and click "Advanced" (Do NOT click "Back to Safety") and then click "Go to Untitled project (unsafe)" and then scroll down and click "Allow".
 
