@@ -189,11 +189,24 @@ Replace all the code already present there with the code below:
 
 ```js
 function teacherEmail() {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet();
-  SpreadsheetApp.setActiveSheet(sheet.getSheetByName('Send Email')); // Change “Send Email” to name of sheet
-  var Range = sheet.getRange("A2:D1000");
-  var data = Range.getValues();
-  const teacherEmails={
+  const lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(30000);
+  }
+  catch (e) {
+    console.log('Could not obtain lock after 30 seconds.');
+    return;
+  }
+
+  const sheet = SpreadsheetApp.getActiveSpreadsheet();
+  SpreadsheetApp.setActiveSheet(sheet.getSheetByName('Send Email'));
+  const formRange = sheet.getRange("A2:C1000");
+  const formData = formRange.getValues();
+  const sentRange = sheet.getRange("D2:D1000");
+  const sentData = sentRange.getValues();
+  console.log("Data collected");
+
+  const teacherEmails = {
     'Rose Abraham' : 'Rose_Abraham@dekalbschoolsga.org',
     'Clarissa Adams' : 'Clarissa_Adams@dekalbschoolsga.org',
     'Demarcus Adams-England' : 'Demarcus_Adams-England@dekalbschoolsga.org',
@@ -344,45 +357,52 @@ function teacherEmail() {
     'Angela Williams-Pitkonen' : 'Angela_L_Williams@dekalbschoolsga.org',
     'Paul Yoon' : 'Paul_Yoon@dekalbschoolsga.org',
     'Claire Zimmerman' : 'Claire_S_Zimmerman@dekalbschoolsga.org',
+    'Dual Enrollment':'alanjharia@gmail.com'
   };
 
-  for (let i = 0; i < data.length; i++) {
-    const row = data[i];
-    const [timestamp, studentName, teacherName, sent] = row;
+
+  for (let i = 0; i < formData.length; i++) {
+    const row = formData[i];
+    const [timestamp, studentName, teacherName] = row;
+    const sent = sentData[i][0];
 
     if (!timestamp) {
       break;
     }
 
-      if (sent == true) {
+    if (sent == true) {
       continue;
     }
 
-    const template = HtmlService.createTemplateFromFile('Email'); //Change this to HTML name
+    const template = HtmlService.createTemplateFromFile('Email');
     const emailAddress = teacherEmails[teacherName.trim()];
 
-    data[i][3] = true;
+    sentData[i][0] = true;
 
     if (!emailAddress) {
+      console.log(`No email address found for ${teacherName}!`);
       continue;
     }
 
-    var changes = {
-      name: studentName
-    }
-
-    template.changes = changes;
+    template.studentName = studentName;
     const message = template.evaluate().getContent();
-
     MailApp.sendEmail({
       to: emailAddress,
-      subject: "Student in club meeting", // The line on the left is the email subject
+      subject: "Student in club meeting", //This line is the email subject
       htmlBody: message
     });
 
-    Range.setValues(data);
-
+    console.log(`Sent email to ${emailAddress} for ${studentName}`);
   }
+
+  //update the spreadsheet
+  sentRange.setValues(sentData);
+  SpreadsheetApp.flush();
+
+  //release the lock
+  lock.releaseLock();
+
+  return;
 }
 ```
 In the code above, near the very bottom of the code, you should see the following code:
@@ -404,13 +424,13 @@ Then replace all the code there with the code below:
 
 ```html
 Good Morning, <br>
-I have <?=changes.name?> for our Club Meeting during ROAR today. Please excuse
+I have <?=studentName?> for our Club Meeting during ROAR today. Please excuse
 him/her for the meeting! <br><br>
 Sincerely,<br>
 Teacher Name
 ```
 
-You can edit the content of the email above. `<br>` specifies a line break (enter by itself does not create a new line. You have to use `<br>`). `<?=changes.name?>` just gets the student name. So type that wherever you want the student name to come up in the email.
+You can edit the content of the email above. `<br>` specifies a line break (enter by itself does not create a new line. You have to use `<br>`). `<?=studentName?>` just gets the student name. So type that wherever you want the student name to come up in the email.
 After you are satisfied with it, click Ctrl+S on your keyboard again to save your work.
 
 Now we are almost done! We have done all the hard work. Now we just need the code to run every time someone submits the google form! To do that, on the very left of the screen, click on the symbol that looks like a stopwatch. If you hover over it, it should say "Triggers".
