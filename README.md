@@ -356,8 +356,7 @@ function teacherEmail() {
     'Natalie Williams' : 'Natalie_C_Williams@dekalbschoolsga.org',
     'Angela Williams-Pitkonen' : 'Angela_L_Williams@dekalbschoolsga.org',
     'Paul Yoon' : 'Paul_Yoon@dekalbschoolsga.org',
-    'Claire Zimmerman' : 'Claire_S_Zimmerman@dekalbschoolsga.org',
-    'Dual Enrollment':'alanjharia@gmail.com'
+    'Claire Zimmerman' : 'Claire_S_Zimmerman@dekalbschoolsga.org'
   };
 
 
