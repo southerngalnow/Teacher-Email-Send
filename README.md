@@ -313,7 +313,7 @@ function teacherEmail() {
     'Billy Mosely' : 'B_Mosely@dekalbschoolsga.org',
     'Mike Nash' : 'John_Nash@dekalbschoolsga.org',
     'Jamie Noble' : 'Jamie_Noble@dekalbschoolsga.org',
-    'Michelle O'Connor' : "Michelle_O'Connor@dekalbschoolsga.org",
+    "Michelle O'Connor" : "Michelle_O'Connor@dekalbschoolsga.org",
     'Alison Oliver' : 'Alison_Oliver@dekalbschoolsga.org',
     'Jennifer Ouanzin' : 'Jennifer_F_Ouanzin@dekalbschoolsga.org',
     'Della Parson' : 'Della_Parson@dekalbschoolsga.org',
