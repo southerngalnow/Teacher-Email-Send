@@ -23,16 +23,12 @@ Thomas Bass
 Jacorey Battle
 Brandon Beech
 Kathleen Bell
-Esther Bentley
 Michael Berry
 Ana Bilbao-Granadillo
 William Blackwood
-Benjamin Braaten
 Kathy Britt
 Russel Brooks
-Lissa Brown
 Jaisha Bruce
-Robert Buggs
 Daniel Buis
 Amy Burrell
 Bill Cefaratti
@@ -101,6 +97,7 @@ Shelly Levy
 Gabrielle Lewis-Hardwick
 Jameson Long
 Vijay Madan
+Ramesheon Marine
 Paul Markley
 Kyle Mastin
 Howard Mccain
@@ -110,6 +107,7 @@ Ronny Mcmann
 Luke McSorley
 Kristin Mendheim
 Raul Mexicano
+Changa Miller
 Billy Mosely
 Mike Nash
 Jamie Noble
@@ -221,16 +219,13 @@ function teacherEmail() {
     'Jacorey Battle' : 'Jacorey_Battle@dekalbschoolsga.org',
     'Brandon Beech' : 'Brandon_Beech@dekalbschoolsga.org',
     'Kathleen Bell' : 'Kathleen_Bell@dekalbschoolsga.org',
-    'Esther Bentley' : 'Esther_Bentley@dekalbschoolsga.org',
     'Michael Berry' : 'Michael_Berry@dekalbschoolsga.org',
     'Ana Bilbao-Granadillo' : 'Ana_Bilbao-Granadillo@dekalbschoolsga.org',
     'William Blackwood' : 'William_Blackwood@dekalbschoolsga.org',
-    'Benjamin Braaten' : 'Benjamin_Braaten@dekalbschoolsga.org',
+	'Stacey Blake' : 'stacey_blake@dekalbschoolsga.org',
     'Kathy Britt' : 'Kathy_Britt@dekalbschoolsga.org',
     'Russel Brooks' : 'Russel_P_Brooks@dekalbschoolsga.org',
-    'Lissa Brown' : 'Lissa_Brown@dekalbschoolsga.org',
     'Jaisha Bruce' : 'Jaisha_Bruce@dekalbschoolsga.org',
-    'Robert Buggs' : 'Robert_Buggs@dekalbschoolsga.org',
     'Daniel Buis' : 'Daniel_Buis@dekalbschoolsga.org',
     'Amy Burrell' : 'Amy_Burrell@dekalbschoolsga.org',
     'Bill Cefaratti' : 'Bill_Cefaratti@dekalbschoolsga.org',
@@ -267,6 +262,7 @@ function teacherEmail() {
     'Ryan Gause' : 'Ryan_Gause@dekalbschoolsga.org',
     'David Gay' : 'James_D_Gay@dekalbschoolsga.org',
     'Roger Gay' : 'Roger_Gay@dekalbschoolsga.org',
+	'Denise George' : denise_george@dekalbschoolsga.org',
     'Ingrid Gero' : 'Ingrid_Gero@dekalbschoolsga.org',
     'Edmond Gibbons' : 'Edmond_Gibbons@dekalbschoolsga.org',
     'Michael Giel' : 'Michael_Giel@dekalbschoolsga.org',
@@ -275,11 +271,15 @@ function teacherEmail() {
     'Emma Handziuk' : 'Emma_Handziuk@dekalbschoolsga.org',
     'Nathalie Hanlet' : 'Nathalie_Hanlet@dekalbschoolsga.org',
     'Briteney Harris' : 'Briteney_Harris@dekalbschoolsga.org',
+	'Larryssa Harris' : 'larryssa_harris@denise_george@dekalbschoolsga.org',
     'Kedrick Harvey' : 'Harvey@dekalbschoolsga.org',
+	'Susan Hawk' : 'susan_hawk@dekalbschoolsga.org',
+	'George Hill' : 'george_hill@denise_george@dekalbschoolsga.org',
     'Eric Hollier' : 'Eric_Hollier@dekalbschoolsga.org',
     'Courtney Holt-Riley' : 'Courtney_Holt-Riley@dekalbschoolsga.org',
     'Jason Hunter' : 'Jason_Hunter@dekalbschoolsga.org',
     'Samuel Hutcherson' : 'Samuel_Hutcherson@dekalbschoolsga.org',
+  	'Thenita Hutchinson' : 'thenita_hutchinson@denise_george@dekalbschoolsga.org',
     'Yussef Jasmine' : 'Yussef_Jasmine@dekalbschoolsga.org',
     'David Johnson' : 'David_C_Johnson@dekalbschoolsga.org',
     'Carla Jones' : 'Carla_Jones@dekalbschoolsga.org',
@@ -299,6 +299,7 @@ function teacherEmail() {
     'Gabrielle Lewis-Hardwick' : 'Gabrielle_Lewis-Hardwick@dekalbschoolsga.org',
     'Jameson Long' : 'Jameson_Long@dekalbschoolsga.org',
     'Vijay Madan' : 'Vijay_B_Madan@dekalbschoolsga.org',
+	  'Ramesheon Marine' : 'ramesheon_marine@dekalbschoolsga.org',
     'Paul Markley' : 'Paul_Markley@dekalbschoolsga.org',
     'Kyle Mastin' : 'Kyle_Mastin@dekalbschoolsga.org',
     'Howard Mccain' : 'Howard_Mccain@dekalbschoolsga.org',
@@ -308,6 +309,7 @@ function teacherEmail() {
     'Luke McSorley' : 'Luke_McSorley@dekalbschoolsga.org',
     'Kristin Mendheim' : 'Kristin_Mendheim@dekalbschoolsga.org',
     'Raul Mexicano' : 'Raul_Mexicano@dekalbschoolsga.org',
+	  'Changa Miller' : 'changa_h_miller@dekalbschoolsga.org',
     'Billy Mosely' : 'B_Mosely@dekalbschoolsga.org',
     'Mike Nash' : 'John_Nash@dekalbschoolsga.org',
     'Jamie Noble' : 'Jamie_Noble@dekalbschoolsga.org',
@@ -358,7 +360,6 @@ function teacherEmail() {
     'Paul Yoon' : 'Paul_Yoon@dekalbschoolsga.org',
     'Claire Zimmerman' : 'Claire_S_Zimmerman@dekalbschoolsga.org'
   };
-
 
   for (let i = 0; i < formData.length; i++) {
     const row = formData[i];
